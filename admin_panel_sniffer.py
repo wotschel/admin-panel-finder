@@ -2,13 +2,9 @@
 #import required modules
 from datetime import datetime as dt
 import sys, random, optparse
-try:#python 3
-    import urllib.request as req
-    from urllib.error import URLError, HTTPError
-    three = True
-except ImportError:#python 2
-    import urllib2 as req
-    three = False
+import requests
+
+
 
 #custom header to avoid being blocked by the website
 custom_headers = {"User-Agent" : "Mozilla/5.0 (Windows NT {}; rv:{}.0) Gecko/20100101 Firefox/{}.0".format(random.randint(7,11),
